@@ -10,8 +10,9 @@ Vue.use(ElementUI)
 Vue.use(Resource)
 Vue.use(payKeyboard)
 /* eslint-disable no-new */
-new Vue({
+var vm = new Vue({
   el: '#app',
   router,
   render: h => h(App)
 })
+export default vm;

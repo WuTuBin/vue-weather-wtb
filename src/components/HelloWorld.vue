@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <el-button @click="handle">change</el-button>
+    <iframe src="../README.md" frameborder="0"></iframe>
     <el-col :span='24'>
       <el-form :inline="true">
         <el-form-item>
@@ -60,7 +62,13 @@ export default {
       gridData: []
     };
   },
+  created(){
+    this.msg = 'b'
+  },
   methods: {
+    handle(){
+      this.msg +='1'
+    },
     query: function() {
       this.$http
         .get(
